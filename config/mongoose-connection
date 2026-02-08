@@ -1,6 +1,8 @@
 const mongoose = require("mongoose");
+const debug = require("debug")("app:mongoose-connection");
+const config = require("config");
 
-mongoose.connect("mongodb://127.0.0.1:27017/express_db")
-  .then(() => console.log("✅ Local MongoDB connected"))
+mongoose.connect(`${config.get("MONGODB_URI")}/express_db`)
+  .then(() => debug("MongoDB connected"))
   .catch(err => console.error(err));
 module.exports = mongoose.connection;

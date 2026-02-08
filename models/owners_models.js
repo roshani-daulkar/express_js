@@ -17,4 +17,4 @@ const ownerSchema = mongoose.Schema({
     picture: String,
 })
 
-module.exports = mongoose.model("product" , ownerSchema);
+module.exports = mongoose.model("owner" , ownerSchema);

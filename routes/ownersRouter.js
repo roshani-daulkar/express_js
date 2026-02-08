@@ -1,7 +1,9 @@
 const express = require("express");
 const ownersRouter = express.Router();
-module.exports = ownersRouter;
+const ownerModel = require("../models/owners_models");
+
 ownersRouter.get("/" , (req , res) => {
     res.send("Hey");
 });
 
+module.exports = ownersRouter;
