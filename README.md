@@ -1,5 +1,5 @@
 # express_js
-Hands-on practice with Express.js, focusing on routing, middleware, request/response handling, and API development.
+Hands-on practice with Express.js, focusing on models,schema,routing,middleware,request/response handling, and API development.
 
 To install mongo db locally
 
