@@ -8,9 +8,8 @@ ownersRouter.get("/" , (req , res) => {
 
 ownersRouter.post("/create" , async function (req , res) {
     let owner = await ownerModel.find();
-    if (owner.length > 0) return res.send(503).send("You are not authorized to create new owner");
+    if (owner.length > 0) return res.status(503).send("You are not authorized to create new owner");
     
-
     let {fullname ,email , password } = req.body;
     
     let created_user = await ownerModel.create({
