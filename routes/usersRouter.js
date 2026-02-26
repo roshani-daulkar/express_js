@@ -37,4 +37,15 @@ usersRouter.post("/register" , async function(req , res){
 });
 
 
+usersRouter.get("/:id" , async function(req , res) {
+    
+    let user = await userModel.findById(req.params.id);
+
+    if (!user)
+    res.status(404).send("user not found");
+
+    res.json(user);
+})
+
+
 module.exports = usersRouter;
